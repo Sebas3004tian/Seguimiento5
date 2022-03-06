@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="702.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Menu">
+              <items>
+                  <MenuItem fx:id="registrarMI" mnemonicParsing="false" onAction="#registrar" text="Registrar" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="filtrarMI" mnemonicParsing="false" onAction="#filtrar" text="Filtrar" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="restablecerMI" mnemonicParsing="false" onAction="#restablecer" text="Restablecer" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu mnemonicParsing="false" text="Eliminar">
+                     <items>
+                        <MenuItem fx:id="eliminarRegistroMI" mnemonicParsing="false" onAction="#eliminarRegistro" text="Elminiar registro seleccionado" />
+                        <MenuItem fx:id="eliminarTodoMI" mnemonicParsing="false" onAction="#eliminarTodo" text="Eliminar todo el registro" />
+                     </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="salirMI" mnemonicParsing="false" onAction="#salir" text="salir" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <TableView fx:id="dataTable" layoutX="14.0" layoutY="43.0" prefHeight="401.0" prefWidth="492.0">
+         <columns>
+            <TableColumn fx:id="montoCol" prefWidth="103.0" text="Monto" />
+            <TableColumn fx:id="tipoCol" prefWidth="96.0" text="Tipo" />
+            <TableColumn fx:id="fechaCol" prefWidth="129.0" text="Fecha" />
+            <TableColumn fx:id="infoCol" prefWidth="163.0" text="Informacion" />
+         </columns>
+      </TableView>
+      <Label layoutX="531.0" layoutY="271.0" text="Ingresos:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="531.0" layoutY="325.0" text="Gastos:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="533.0" layoutY="379.0" prefHeight="17.0" prefWidth="56.0" text="Balance:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ingresosTF" editable="false" layoutX="531.0" layoutY="292.0" />
+      <TextField fx:id="balanceTF" editable="false" layoutX="531.0" layoutY="400.0" />
+      <TextField fx:id="gastosTF" editable="false" layoutX="531.0" layoutY="346.0" />
+      <Button fx:id="actualizarBTN" layoutX="532.0" layoutY="220.0" mnemonicParsing="false" onAction="#actualizar" prefHeight="36.0" prefWidth="149.0" text="Actualizar datos">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
